@@ -1,37 +1,45 @@
+
 /* Styling for the Flipbook Container */
 .flip-data {
-  width: 300px;
-  height: 300px;
   position: relative;
-  margin-top: 180px; /* Adjust for smaller screens */
+  margin-top: 150px; /* Adjust for smaller screens */
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 250px;
 }
 hr{
   border-top: 2px solid #000;
 }
-.scrollable-content {
+.scrollable-certifications {
   max-height: 150px;
   overflow: scroll;
+  margin-left: 10px;
 }
 #imgicon {
-  height: 200px;
-  width: 200px;
+  margin-top: 30px;
+  height: 130px;
+  width: 130px;
   border-radius: 50%;
 }
 #dep,#emp,#edu, #cert{
   margin-top: 5px;
+  font-size: 8px;
 }
 
 #type{
-  font-size: 20px;
-  margin-top: 15px;
+  font-size: 15px;
+  margin-top: 10px;
   left:50%;
   color: #ffffff;
   font-weight: bold;
 }
 .flip-data p {
   text-align: center;
+}
+/* FLIPPAGE COMPONENT CSS*/
+.custom-flipbook {
+  width: 800px; /* Set the desired width in pixels or another valid unit */
+  height: 600px; /* Set the desired height in pixels or another valid unit */
 }
 
 /* Styling for the main pages */
@@ -55,8 +63,9 @@ hr{
 
 /* Define a background image for even and odd pages */
 .even-page  {
-  background-image: url('Even.png');
+  background-image: url('Even2.png');
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
 }
 .even-page #imgIcon{
@@ -66,41 +75,104 @@ hr{
   border:3px #2d93f3 solid;
 }
 .odd-page {
-  background-image: url('Odd.png');
+  background-image: url('Odd2.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
-
+/* BUTTON CSS*/
+#facultyProfileButton, #certificationsButton{
+  margin-top: 30px;
+  padding:10px;
+  border-radius: 5px;
+  border:none;
+  font-weight: bold;
+  color: #ffffff;
+  display: static;
+  background-color: #2d93f3;
+}
+#facultyProfileButton:active, #certificationsButton:active{
+  margin-top: 30px;
+  padding:10px;
+  border-radius: 5px;
+  border:none;
+  font-weight: bold;
+  color: #ffffff;
+  display: static;
+  background-color: #f3c52d;
+}
 /* Styling for page content */
-
 #name{
-  font-size: 20px;
+  font-size: 10px;
   font-weight: bold;
 }
 #position{
   font-style: italic
 }
-
-
 /* Media Query for smaller screens */
 @media screen and (max-width: 1500px) {
   #imgicon {
-    height: 150px;
-    width: 150px;
-    margin-top: 55px;
+    height: 100px;
+    width: 100px;
+    margin-top: 30px;
   }
 
   .flip-data {
-    width: 200px;
+    width: 250px;
     height: 200px;
     margin-top: 120px;
   }
-
+  .scrollable.certifications{
+    margin-left: 100px;
+  }
   .flip-data p {
     font-size: 5px;
   }
   
+}
+@media screen and (max-width: 820px) {
+  #imgicon {
+    height: 150px;
+    width: 150px;
+    margin-top: 105px;
+  }
+  .even-page  {
+    margin-left: 5px;
+    background-image: url('Even2.png');
+    background-size: cover;
+    background-position: center;
+  }
+  .odd-page {
+    margin-left: 5px;
+    background-image: url('Odd2.png');
+    background-size:  cover;
+    background-position: center;
+  }
+  #imgicon {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin-top: 30px;
+  }
+  #type{
+    font-size: 15px;
+    margin-top: 7px;
+    left:50%;
+    color: #ffffff;
+    font-weight: bold;
+  }
+  #name{
+    font-size: 10px;
+    font-weight: bold;
+  }
+  hr{
+    border-top: 1px solid #000;
+  }
+  #position,#dep,#emp,#edu, #cert{
+    font-size: 5px;
+    font-style: italic
+  }
+
 }
 @media screen and (max-width: 768px) {
   #imgicon {
@@ -108,14 +180,216 @@ hr{
     width: 150px;
     margin-top: 105px;
   }
-
+  #facultyProfileButton, #certificationsButton{
+    display: static;
+  }
   .flip-data {
-    width: 200px;
-    height: 200px;
-    margin-top: 120px;
+    width: 250px;
+  }
+  .even-page  {
+    margin-left: 5px;
+    background-image: url('Even2.png');
+    background-size: cover;
+    background-position: center;
+  }
+  .odd-page {
+    margin-left: 5px;
+    background-image: url('Odd2.png');
+    background-size:  cover;
+    background-position: center;
+  }
+  #imgicon {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin-top: 30px;
+  }
+  #type{
+    font-size: 15px;
+    margin-top: 7px;
+    left:50%;
+    color: #ffffff;
+    font-weight: bold;
+  }
+  #name{
+    font-size: 10px;
+    font-weight: bold;
+  }
+  hr{
+    border-top: 1px solid #000;
+  }
+  #position,#dep,#emp,#edu, #cert{
+    font-size: 5px;
+    font-style: italic
   }
 
-  .flip-data p {
+}
+@media screen and (max-width: 468px) {
+  .even-page  {
+    background-image: url('Even2.png');
+    background-size: 400px 520px;
+    background-position: center;
+  }
+  .odd-page {
+    background-image: url('Odd2.png');
+    background-size: 400px 520px;
+    background-position: center;
+  }
+  #imgicon {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin-top: 30px;
+  }
+  #type{
+    font-size: 15px;
+    margin-top: 7px;
+    left:50%;
+    color: #ffffff;
+    font-weight: bold;
+  }
+  #name{
+    font-size: 10px;
+    font-weight: bold;
+  }
+  hr{
+    border-top: 1px solid #000;
+  }
+  #position,#dep,#emp,#edu, #cert{
     font-size: 5px;
+    font-style: italic
+  }
+  .flip-data{
+    width: 200px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .even-page  {
+    margin-left: 0px;
+    background-image: url('Even2.png');
+    background-size: 360px 520px;
+    background-position: center;
+  }
+  .odd-page {
+    margin-left: 0px;
+    background-image: url('Odd2.png');
+    background-size: 360px 520px;
+    background-position: center;
+  }
+  #imgicon {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin-top: 30px;
+  }
+  #type{
+    font-size: 15px;
+    margin-top: 7px;
+    left:50%;
+    color: #ffffff;
+    font-weight: bold;
+  }
+  #name{
+    font-size: 5px;
+    font-weight: bold;
+  }
+  hr{
+    border-top: 1px solid #000;
+  }
+  #position,#dep,#emp,#edu, #cert{
+    font-size: .5em;
+    font-style: italic
+  }
+  .flip-data{
+    width: 200px;
+  }
+}
+@media screen and (max-width: 365px) {
+  .even-page  {
+    margin-left: 15px;
+    background-image: url('Even2.png');
+    background-size: 390px 520px;
+    background-position: center;
+  }
+  .odd-page {
+    margin-left: 10px;
+    background-image: url('Odd2.png');
+    background-size: 380px 520px;
+    background-position: center;
+  }
+  #imgicon {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin-top: 30px;
+  }
+  #type{
+    font-size: 15px;
+    margin-top: 7px;
+    left:50%;
+    color: #ffffff;
+    font-weight: bold;
+  }
+  #name{
+    font-size: 5px;
+    font-weight: bold;
+  }
+  hr{
+    border-top: 1px solid #000;
+  }
+  #position,#dep,#emp,#edu, #cert{
+    font-size: .5em;
+    font-style: italic
+  }
+  .flip-data{
+    width: 200px;
+  }
+}
+@media screen and (max-width: 280px) {
+  .even-page  {
+    margin-left: 55px;
+    background-image: url('Even2.png');
+    background-size: 380px 520px;
+    background-position: center;
+  }
+  .odd-page {
+    margin-left: 55px;
+    background-image: url('Odd2.png');
+    background-size: 380px 520px;
+    background-position: center;
+  }
+  .button-container{
+    margin-left: 102px;
+  }
+  #facultyProfileButton, #certificationsButton{
+    
+    display: static;
+  }
+  #imgicon {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin-top: 30px;
+  }
+  #type{
+    font-size: 15px;
+    margin-top: 7px;
+    left:50%;
+    color: #ffffff;
+    font-weight: bold;
+  }
+  #name{
+    font-size: 5px;
+    font-weight: bold;
+  }
+  hr{
+    border-top: 1px solid #000;
+  }
+  #position,#dep,#emp,#edu, #cert{
+    font-size: .5em;
+    font-style: italic
+  }
+  .flip-data{
+    width: 200px;
   }
 }
