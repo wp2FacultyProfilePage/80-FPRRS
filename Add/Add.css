@@ -1,5 +1,5 @@
 
-@media screen and (max-width: 1500px) {
+
   #addfaculty {
     position: absolute;
     top: 20px;
@@ -467,7 +467,7 @@
     font-size: 16px;
     margin-bottom: 20px;
   }
-}
+
 /* Ensure that the modal is centered */
 @media screen and (max-width: 900px) {
   .custom-container {
