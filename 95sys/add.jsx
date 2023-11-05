@@ -405,19 +405,18 @@ function CRUD() {
         <div className="custom-sidebar-text">
           <h2>CICT FACULTY <br />(ADMIN)</h2>
         </div>
-
-        <div className="custom-logout-container">
+        <div className="custom-view-container">
           <Link to="/add">
-            <div className="custom-logout-container">
-              <button id="CustomLogoutButton" onClick={handleLogout}>
-                LOG OUT
+            <div>
+              <button id="viewflipbtn" onClick={handleLogoutView}>
+               VIEW FLIPBOOK
               </button>
             </div>
           </Link>
           <Link to="/add">
-            <div className="custom-view-container">
-              <button id="CustomViewButton" onClick={handleLogoutView}>
-               VIEW FLIPBOOK
+            <div>
+              <button id="logoutbtn" onClick={handleLogout}>
+                LOG OUT
               </button>
             </div>
           </Link>
@@ -449,17 +448,16 @@ function CRUD() {
               <table>
                 <tr>
                   <th id="title"> 
-                  <p className="modal-title">PROFILE</p>
-                  </th>
-                  <th id="title">
+                  <p className="modal-title">
                     <span className="thclose" onClick={() => openItemModal(null)}>
-                    &times;
-                  </span>
+                      &times;
+                    </span>
+                    PROFILE
+                  </p>
                   </th>
                 </tr>
                 <tr>
                   <td>
-                 
                   <div className="modal-details">
                     <img src={selectedItem.imgUrl} alt="Selected Image" />
                     <p><strong>{selectedItem.facultyType}</strong></p>
@@ -633,15 +631,15 @@ function CRUD() {
         <div className="research-modal-overlay">
           <div className={`research-modal ${researchModalOpen ? 'open' : ''}`}>
             <div className="research-modal-content">
-            <table>
+            <table id="research-table">
             <tr>
-              <th id="title">
-                <p className="modal-title">Research</p>
-              </th>
-              <th id="title">
-                <span className="researchclose" onClick={closeResearchModal}>
-                  &times;
-                </span>
+              <th id="title"> 
+                <p className="modal-title">
+                  <span className="thclose" onClick={() => closeResearchModal()}>
+                    &times;
+                  </span>
+                  RESEARCH
+                </p>
               </th>
             </tr>
             <tr>
