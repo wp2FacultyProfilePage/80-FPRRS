@@ -5,14 +5,20 @@
   margin-top: 20px;
 }
 
-.research-table {
- margin:  auto;
-  width: 50%;
+#research-table{
+  width: 100%;
   border-collapse: collapse;
+}
+
+.research-table {
+  margin:  auto;
+  width: 100%;
+  
 }
 
 .research-table th {
   background-color: #f2f2f2;
+  border-collapse: collapse;
   text-align: center;
 }
 
@@ -70,9 +76,9 @@ th p{
 
 #img-show{
   border-radius: 50%;
-  margin:10px 45% 20px 34%;
-  width: '100px';
-  height: '100px';
+  margin:10px 30% 20px 34%;
+  width: '110px';
+  height: '110px';
 }
 
 /* RESEARCH MODAL CSS*/
@@ -190,8 +196,9 @@ th p{
 }
 
 .modal-details p {
-  font-size: 15px;
+  font-size: 20px;
   margin: 10px 0;
+  font-family: "Arial Narrow", Arial, sans-serif; /* Use "Arial Narrow" with fallbacks */
 }
 
 /*UL LI CSS*/
@@ -202,7 +209,7 @@ th p{
 }
 
 #li-add {
-  font-size: 15px;
+  font-size: 20px;
   margin-left: 20px;
   margin-bottom: 5px; /* Add some vertical spacing between list items */
   font-family: "Arial Narrow", Arial, sans-serif; /* Use "Arial Narrow" with fallbacks */
@@ -362,7 +369,7 @@ select{
 }
 
 #Input{
-  margin: 0px 0px 20px 0px;
+  margin: 0px 0px 5px 0px;
 }
 
 #input-div{
@@ -544,9 +551,22 @@ select{
   
 }
 
-/* Style for the logout button */
-#CustomLogoutButton {
+#viewflipbtn{
+  margin-bottom: 10px;
   height:30px;
+  width:200px;
+  background-color: #238b9b;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Style for the logout button */
+#logoutbtn {
+  height:30px;
+  width:200px;
   background-color: #f00;
   color: #fff;
   border: none;
@@ -555,8 +575,8 @@ select{
   cursor: pointer;
 }
 
-.custom-logout-container{
-  margin-top: 300px;
+.custom-view-container{
+  margin: 500px 0px 0px 0px;
 }
 
 .custom-modal h2 {
@@ -657,12 +677,12 @@ select{
 }
 
 .thclose,.researchclose {
-  height: 50px;
+  position: sticky;
   background-color: #00434e;
   padding: 0px 5px 0px 0px;
   color: #ffffff;
   float:right;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: bold;
   cursor: pointer;
 }
